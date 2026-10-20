@@ -1,5 +1,3 @@
-import { ICONS } from './skillIcons'
-
 const img = (path) => `/resources/images/projects/${path}`
 
 export const PROJECTS = [

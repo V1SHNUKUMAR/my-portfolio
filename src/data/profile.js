@@ -115,17 +115,23 @@ const cert = (file) => `/resources/certificates/${file}`
 
 export const CERTIFICATES = {
   javascript: { src: cert('javascript-basic-certificate-Hackerrank.jpg'), alt: 'javascript certificate' },
+  frontend: { src: cert('Frontend-certificate-Simplilearn.jpg'), alt: 'Frontend certificate' },
+  sql: { src: cert('SQL.jpg'), alt: 'SQL certificate' },
+  aiIntro: { src: cert('Intro to AI - Coursera UZE6179PVABM_page-0001.jpg'), alt: 'Introduction to AI certificate' },
+  maxProdWithAI: { src: cert('Maximize productivity - Coursera MEHUDGSNDIKW_page-0001.jpg'), alt: 'Maximize Productivity with AI certificate' },
   html: { src: cert('HTML-certificate-MyGreatLearning.jpg'), alt: 'html certificate' },
   css: { src: cert('css-certificate-Hackerrank.jpg'), alt: 'css certificate' },
-  frontend: { src: cert('Frontend-certificate-Simplilearn.jpg'), alt: 'Frontend certificate' },
   java: { src: cert('java-basic certificate-Hackerrank.jpg'), alt: 'Java certificate' },
 }
 
 export const HOME_CERTIFICATES = [
   CERTIFICATES.javascript,
+  CERTIFICATES.frontend,
+  CERTIFICATES.maxProdWithAI,
+  CERTIFICATES.aiIntro,
+  CERTIFICATES.sql,
   CERTIFICATES.html,
   CERTIFICATES.css,
-  CERTIFICATES.frontend,
   CERTIFICATES.java,
 ]
 

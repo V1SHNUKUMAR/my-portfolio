@@ -11,9 +11,9 @@ const TIME_OFFSET = ['', 'mt-[1.5rem]', 'mt-[0.5rem]']
 function BasicInfo() {
   return (
     <Reveal className="flex w-[40%] flex-col items-center justify-center lte-870:mx-auto lte-870:min-w-full lte-870:text-center">
-      <Reveal className="my-[1rem] h-[15em] w-[15em] rounded-full bg-[linear-gradient(to_left,#743ad5,#d53a9d)] shadow-[0_0_20px_white] delay-200">
-        <div className="h-full w-full rounded-full bg-white p-[5px]">
-          <img src={PROFILE_PHOTO} alt="Developer Pic" className="h-full rounded-full [filter:brightness(1.1)]" />
+      <Reveal className="my-[1rem] h-[15em] w-[15em] rounded-full bg-[linear-gradient(to_left,#743ad5,#d53a9d)] p-1 shadow-[0_0_20px_white] delay-200">
+        <div className="h-full w-full overflow-hidden rounded-full bg-white p-[5px]">
+          <img src={PROFILE_PHOTO} alt="Developer Pic" className="h-full w-full rounded-full object-cover object-center" />
         </div>
       </Reveal>
       <Reveal className="text-[2.5em] font-bold delay-200">Vishnu Kumar</Reveal>
