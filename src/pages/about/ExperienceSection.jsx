@@ -20,7 +20,7 @@ export default function ExperienceSection() {
       />
       <SectionHeading light>Experience</SectionHeading>
       <Reveal className="mx-[1rem] mt-[10rem] mb-[8rem] flex content-center items-center justify-evenly lte-900:flex-col lte-900:gap-[5rem]">
-        <div className="sticky top-0 overflow-hidden rounded-[20px] lte-900:static lte-500:grid lte-500:place-items-center">
+        <div className="sticky top-0 overflow-hidden rounded-[10px] lte-900:static lte-500:grid lte-500:place-items-center">
           <img
             src="/resources/images/hobbies/developer2.png"
             alt="Developer image"

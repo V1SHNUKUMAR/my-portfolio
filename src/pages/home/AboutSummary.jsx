@@ -27,7 +27,7 @@ function BasicInfo() {
         {SKILL_CHIPS.map((skill, i) => (
           <div
             key={`${skill}-${i}`}
-            className="mx-[5px] my-[2px] inline-block rounded-[12px] bg-[color:bisque] px-[10px] py-[5px] text-[1.2em] font-bold text-black"
+            className="mx-[5px] my-[2px] inline-block rounded-[8px] bg-[color:bisque] px-[10px] py-[5px] text-[1.2em] font-bold text-black"
           >
             {skill}
           </div>
@@ -81,10 +81,10 @@ function ExperienceList() {
 export default function AboutSummary() {
   return (
     <section className="relative mt-[2rem] flex min-h-screen w-full flex-col items-center justify-center bg-ink py-[2rem] text-white">
-      <div className="absolute top-[-4.8%] z-1 rounded-[12px] bg-tomato px-[0.4em] py-[0.1em] text-[4em] shadow-[0_0_20px_tomato]">
+      <div className="absolute top-[-4.8%] z-1 rounded-[8px] bg-tomato px-[0.4em] py-[0.1em] text-[4em] shadow-[0_0_20px_tomato]">
         About Me
       </div>
-      <div className="flex min-h-[80%] min-w-[80%] max-w-[90%] flex-wrap items-center justify-center rounded-[1.5em] bg-transparent p-[1rem] lte-440:min-w-[95%]">
+      <div className="flex min-h-[80%] min-w-[80%] max-w-[90%] flex-wrap items-center justify-center rounded-[12px] bg-transparent p-[1rem] lte-440:min-w-[95%]">
         <BasicInfo />
         <ExperienceList />
       </div>

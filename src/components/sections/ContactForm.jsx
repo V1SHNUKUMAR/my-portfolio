@@ -4,7 +4,7 @@ import ShineButton from '../ui/ShineButton'
 import SocialLinks from '../ui/SocialLinks'
 
 const fieldClass =
-  'my-[0.2em] block w-full rounded-[12px] border border-[rgba(128,128,128,0.479)] px-[0.5em] py-[0.6em] text-[1.6em] dark:bg-white/5 dark:text-inherit dark:placeholder:text-white/40 [transition:.2s_ease-in-out] hover:border-blue-400 outline-transparent focus:outline focus:outline-blue-400'
+  'my-[0.2em] block w-full rounded-[6px] border border-[rgba(128,128,128,0.479)] px-[0.5em] py-[0.6em] text-[1.6em] dark:bg-white/5 dark:text-inherit dark:placeholder:text-white/40 [transition:.2s_ease-in-out] hover:border-blue-400 outline-transparent focus:outline focus:outline-blue-400'
 const labelClass = 'ml-[0.2em] text-[2em]'
 
 /**
@@ -15,7 +15,7 @@ export default function ContactForm({ as = 'div' }) {
   return (
     <Reveal
       as={as}
-      className="flex w-[400px] flex-col items-center justify-center rounded-[12px] border-x border-b border-t-[5px] border-x-white border-b-white border-t-[rgb(0,140,255)] bg-white/20 dark:border-x-white/15 dark:border-b-white/15 dark:bg-white/5 px-[3em] py-[1em] backdrop-blur-[20px]"
+      className="flex w-[400px] flex-col items-center justify-center rounded-[6px] border-x border-b border-t-[5px] border-x-white border-b-white border-t-[rgb(0,140,255)] bg-white/20 dark:border-x-white/15 dark:border-b-white/15 dark:bg-white/5 px-[3em] py-[1em] backdrop-blur-[20px]"
     >
       <div>
         <div className="p-[0.3em] text-center text-[3em] font-medium">Get in touch</div>

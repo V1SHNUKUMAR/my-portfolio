@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 // Pill button with the white "shine" sweep on hover (was `.buttons button`).
 // `overflow-clip` (not hidden) keeps the text baseline, matching how a native <button> sits in a line.
 const BASE =
-  "relative inline-block cursor-pointer overflow-clip rounded-[30px] px-[1em] py-[0.8em] text-[1.3em] no-underline [transition:.2s_ease-out] hover:-translate-y-[5px] before:absolute before:top-0 before:-left-[20%] before:-z-1 before:h-full before:w-[30%] before:skew-x-30 before:rounded-[30px] before:bg-white/50 before:shadow-[0_0_20px_30px_rgba(255,255,255,0.5)] before:[transition:all_.4s_ease] hover:before:left-[160%]"
+  "relative inline-block cursor-pointer overflow-clip rounded-[8px] px-[1em] py-[0.8em] text-[1.3em] no-underline [transition:.2s_ease-out] hover:-translate-y-[5px] before:absolute before:top-0 before:-left-[20%] before:-z-1 before:h-full before:w-[30%] before:skew-x-30 before:rounded-[30px] before:bg-white/50 before:shadow-[0_0_20px_30px_rgba(255,255,255,0.5)] before:[transition:all_.4s_ease] hover:before:left-[160%]"
 
 const VARIANTS = {
   primary: 'border-none bg-brand font-normal text-white',

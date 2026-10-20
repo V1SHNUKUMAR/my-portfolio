@@ -14,8 +14,8 @@ export const PROJECTS = [
     ],
     description:
       'Moments is a full-stack social media app built with React.js and Tailwind CSS on the frontend and Node.js, Express and MySQL on the backend. It has user authentication and the full social experience: create and share posts, like and comment, follow or unfollow users, and browse profile pages. Users can edit their details in an update profile modal and switch between light and dark mode.',
-    liveUrl: 'https://fullstack-chat-app-n8wp.onrender.com',
-    codeUrl: 'https://github.com/V1SHNUKUMAR/fullstack-chat-app',
+    liveUrl: 'https://moments-social-media.vercel.app/',
+    codeUrl: 'https://github.com/V1SHNUKUMAR/social-media-app',
     cover: img('socialMediaApp/socialMediaApp.png'),
   },
   {

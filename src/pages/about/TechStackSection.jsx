@@ -15,7 +15,7 @@ function SkillCard({ skill }) {
   return (
     <div
       ref={ref}
-      className={`${revealClass(visible)} group relative h-[10em] w-[10em] overflow-hidden rounded-[1.5em] bg-white p-[1.5em] shadow-[0_30px_30px_#afb9cabb] dark:bg-[#e8ebf2] dark:text-ink dark:shadow-[0_30px_30px_rgba(0,0,0,0.45)] backdrop-blur-[2px] [transition:0.3s_ease] lte-900:h-[12em] lte-900:w-[12em] lte-500:h-[10em] lte-500:w-[10em] lte-350:h-[9em] lte-350:w-[9em]`}
+      className={`${revealClass(visible)} group relative h-[10em] w-[10em] overflow-hidden rounded-[12px] bg-white p-[1.5em] shadow-[0_30px_30px_#afb9cabb] dark:bg-[#e8ebf2] dark:text-ink dark:shadow-[0_30px_30px_rgba(0,0,0,0.45)] backdrop-blur-[2px] [transition:0.3s_ease] lte-900:h-[12em] lte-900:w-[12em] lte-500:h-[10em] lte-500:w-[10em] lte-350:h-[9em] lte-350:w-[9em]`}
     >
       <img
         src={skill.icon}

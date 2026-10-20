@@ -28,33 +28,3 @@ export const ICONS = {
   vscode: `${dir}/vscode.png`,
   videosdk: `${dir}/videosdk.jfif`,
 }
-
-/** Display name + brand colour per icon, used where techs render as text. */
-export const TECH_META = {
-  [ICONS.html]: { name: 'HTML', color: '#e34f26' },
-  [ICONS.html5]: { name: 'HTML5', color: '#e34f26' },
-  [ICONS.css]: { name: 'CSS', color: '#1572b6' },
-  [ICONS.css3]: { name: 'CSS3', color: '#1572b6' },
-  [ICONS.javascript]: { name: 'JavaScript', color: '#f7df1e' },
-  [ICONS.javascriptPlain]: { name: 'JavaScript', color: '#f7df1e' },
-  [ICONS.reactjs]: { name: 'React', color: '#61dafb' },
-  [ICONS.reactjs2]: { name: 'React', color: '#61dafb' },
-  [ICONS.redux]: { name: 'Redux', color: '#764abc' },
-  [ICONS.nextjs]: { name: 'Next.js', color: '#888888' },
-  [ICONS.nodejs]: { name: 'Node.js', color: '#5fa04e' },
-  [ICONS.express]: { name: 'Express', color: '#888888' },
-  [ICONS.mongodb]: { name: 'MongoDB', color: '#47a248' },
-  [ICONS.tailwind]: { name: 'Tailwind CSS', color: '#06b6d4' },
-  [ICONS.mui]: { name: 'Material UI', color: '#007fff' },
-  [ICONS.bootstrap]: { name: 'Bootstrap', color: '#7952b3' },
-  [ICONS.typescript]: { name: 'TypeScript', color: '#3178c6' },
-  [ICONS.flutter]: { name: 'Flutter', color: '#02569b' },
-  [ICONS.firebase]: { name: 'Firebase', color: '#ffca28' },
-  [ICONS.java]: { name: 'Java', color: '#e76f00' },
-  [ICONS.github]: { name: 'GitHub', color: '#888888' },
-  [ICONS.framerMotion]: { name: 'Framer Motion', color: '#ff0055' },
-  [ICONS.sass]: { name: 'Sass', color: '#cc6699' },
-  [ICONS.cursor]: { name: 'Cursor', color: '#888888' },
-  [ICONS.vscode]: { name: 'VS Code', color: '#007acc' },
-  [ICONS.videosdk]: { name: 'VideoSDK', color: '#5568fe' },
-}

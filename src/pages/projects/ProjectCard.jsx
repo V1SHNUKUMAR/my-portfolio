@@ -1,29 +1,7 @@
 import Reveal from '../../components/ui/Reveal'
 import ShineButton from '../../components/ui/ShineButton'
 import ProjectFrame from '../../components/ui/ProjectFrame'
-import { TECH_META } from '../../data/skillIcons'
-
-// Text chips instead of logos: a glowing brand-colour dot + the tech's name.
-function TechTags({ techs }) {
-  return (
-    <div className="mb-[1.5em] lte-1005:text-center">
-      <ul className="flex flex-wrap gap-[0.6em] lte-1005:justify-center list-none">
-        {techs?.map((tech, i) => {
-          const meta = { name: tech?.name, color: '#888888' }
-          return (
-            <li
-              key={`${tech.src}-${i}`}
-              // style={{ '--tech': meta.color }}
-              className="rounded-full border border-white/70 bg-white/60 px-[0.9em] py-[0.35em] text-[1.15em] font-semibold tracking-wide backdrop-blur-md [transition:0.25s_ease] dark:border-white/15 dark:bg-white/10"
-            >
-              {meta?.name}
-            </li>
-          )
-        })}
-      </ul>
-    </div>
-  )
-}
+import TechTags from '../../components/ui/TechTags'
 
 /*
  * The original stylesheet decorated cards with `:nth-child()` rules (later rules win:
@@ -61,19 +39,19 @@ export default function ProjectCard({ project, position }) {
   const hasButtons = project.liveUrl || project.codeUrl
 
   return (
-    <section className="relative mx-auto mt-[1em] mb-[5em] w-[90vw] max-w-[1400px] rounded-[2em] border border-white bg-white/50 dark:border-white/10 dark:bg-white/5">
+    <section className="relative mx-auto mt-[1em] mb-[5em] w-[90vw] max-w-[1400px] rounded-[12px] border border-white bg-white/50 dark:border-white/10 dark:bg-white/5">
       <div
-        className={`relative flex min-h-[90vh] content-center items-center justify-around rounded-[2em] lte-1005:flex-col-reverse lte-1005:justify-center lte-1005:gap-[5rem] ${coverBackground(position)} ${coverBlobs(position)}`}
+        className={`relative flex min-h-[90vh] content-center items-center justify-around rounded-[12px] lte-1005:flex-col-reverse lte-1005:justify-center lte-1005:gap-[5rem] ${coverBackground(position)} ${coverBlobs(position)}`}
       >
         <Reveal className="mx-0 mt-[0.5em] mb-[1em] w-[40%] max-w-[60em] p-[1em] lte-1005:mx-auto lte-1005:w-full lte-1005:text-center lte-1005:font-medium">
-          <TechTags techs={project.techs} />
+          <TechTags techs={project.techs} className="mb-[1.5em] lte-1005:justify-center" />
           <div
             data-cursor-enlarge
             className="text-[5em] font-extrabold lte-1260:text-[4em] lte-1005:text-[3.5em] lte-500:text-[3em]"
           >
             {project.name}
           </div>
-          <div className="m-[1em] h-[0.3em] w-[10em] rounded-[5em] bg-black lte-1005:mx-auto dark:bg-white" />
+          <div className="m-[1em] h-[0.3em] w-[10em] rounded-[2px] bg-black lte-1005:mx-auto dark:bg-white" />
           <div data-cursor-enlarge className="px-[0.1em] py-[0.5em] text-[1.4em] opacity-80">
             {project.description}
           </div>

@@ -15,7 +15,7 @@ function HobbyCard({ hobby }) {
   return (
     <div
       ref={ref}
-      className={`${revealClass(visible)} relative h-[20em] w-[20em] rounded-[12px] bg-white/50 text-center shadow-[5px_5px_20px_rgba(0,0,0,0.1)] dark:bg-white/10 dark:shadow-[5px_5px_20px_rgba(0,0,0,0.4)] backdrop-blur-[10px] [transform-style:preserve-3d] [transform:perspective(1000px)] lte-900:h-[15em] lte-900:w-[15em] lte-350:h-[10em] lte-350:w-[10em]`}
+      className={`${revealClass(visible)} relative h-[20em] w-[20em] rounded-[8px] bg-white/50 text-center shadow-[5px_5px_20px_rgba(0,0,0,0.1)] dark:bg-white/10 dark:shadow-[5px_5px_20px_rgba(0,0,0,0.4)] backdrop-blur-[10px] [transform-style:preserve-3d] [transform:perspective(1000px)] lte-900:h-[15em] lte-900:w-[15em] lte-350:h-[10em] lte-350:w-[10em]`}
     >
       <div className="absolute top-[-20%] left-0 flex h-full w-full flex-col items-center justify-between text-[2em] font-semibold lte-900:text-[1.5em] lte-350:text-[1.1em]">
         <img

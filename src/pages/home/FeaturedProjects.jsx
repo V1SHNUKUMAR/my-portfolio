@@ -1,7 +1,7 @@
-import { Fragment } from 'react'
 import Reveal from '../../components/ui/Reveal'
 import ProjectFrame from '../../components/ui/ProjectFrame'
 import ShineButton from '../../components/ui/ShineButton'
+import TechTags from '../../components/ui/TechTags'
 import { FEATURED_PROJECTS } from '../../data/projects'
 
 function ProjectInfo({ project, mirrored }) {
@@ -21,18 +21,10 @@ function ProjectInfo({ project, mirrored }) {
         </h5>
       </div>
       <hr className="m-0 h-[5px] w-1/4 rounded-[50%] bg-black dark:bg-white" />
-      <div>
-        {project.techs.map((tech, i) => (
-          <Fragment key={tech.src}>
-            {i > 0 && ' '}
-            <img
-              src={tech.src}
-              alt={tech.alt}
-              className="mx-[0.5em] my-[1.5em] h-[5em] rounded-[1em] border border-[rgba(0,0,0,0.1)] bg-white/50 p-[0.5em] dark:border-white/10 dark:bg-white/90"
-            />
-          </Fragment>
-        ))}
-      </div>
+      <TechTags
+        techs={project.techs}
+        className={`my-[1.5em] lte-870:justify-center ${mirrored ? 'justify-start' : 'justify-end'}`}
+      />
       <div className="mt-0 mb-[1em] max-w-[40rem] text-[1.5rem] lte-870:min-w-[70%]">{project.description}</div>
       <div>
         <ShineButton to="/projects" icon="fa fa-angle-right" iconAfter className="my-[1em]">

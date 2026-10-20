@@ -21,7 +21,7 @@ export default function ProjectFrame({ src, alt, url, label, caption = 'Live pro
       rel="noopener noreferrer"
       aria-label={url ? `Open ${host}` : alt}
       data-cursor-text={url ? cursorText : undefined}
-      className="group block w-full overflow-hidden rounded-2xl border border-black/10 bg-white text-black no-underline shadow-[0_20px_60px_-30px_rgba(0,0,0,0.35)] transition-colors duration-500 hover:border-black/25 dark:border-white/10 dark:bg-[#0c0c0c] dark:text-white dark:hover:border-white/25"
+      className="group block w-full overflow-hidden rounded-[10px] border border-black/10 bg-white text-black no-underline shadow-[0_20px_60px_-30px_rgba(0,0,0,0.35)] transition-colors duration-500 hover:border-black/25 dark:border-white/10 dark:bg-[#0c0c0c] dark:text-white dark:hover:border-white/25"
     >
       {/* Browser chrome */}
       <div className="flex items-center gap-[12px] border-b border-black/10 px-[16px] py-[12px] dark:border-white/10">
