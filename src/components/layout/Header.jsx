@@ -46,25 +46,27 @@ export default function Header({ menuOpen, onOpenMenu }) {
             </ul>
           </nav>
           <div className="w-[5em]" />
-          <div>
+        </div>
+        {/* one toggle for both layouts, so desktop and mobile never disagree about the theme */}
+        <div className='flex items-center justify-center md:gap-3'>
+          <div className='hidden md:block'>
             <ShineButton href={RESUME_URL} newTab icon="fa-solid fa-download">
               Download CV
             </ShineButton>
           </div>
-        </div>
-        {/* one toggle for both layouts, so desktop and mobile never disagree about the theme */}
-        <div className="flex items-center gap-[1.5em]">
-          <ThemeToggle className="ml-[2em] lte-800:ml-0" />
-          <button
-            type="button"
-            onClick={onOpenMenu}
-            aria-label="Open menu"
-            aria-expanded={menuOpen}
-            aria-controls="fullscreen-menu"
-            className={`hidden cursor-pointer border-none bg-transparent text-[2.5em] mix-blend-difference lte-800:inline-block ${menuIconColor}`}
-          >
-            <i className="fa fa-bars" aria-hidden="true" />
-          </button>
+          <div className="flex items-center gap-[1.5em]">
+            <ThemeToggle className="ml-[2em] md:ml-0" />
+            <button
+              type="button"
+              onClick={onOpenMenu}
+              aria-label="Open menu"
+              aria-expanded={menuOpen}
+              aria-controls="fullscreen-menu"
+              className={`hidden cursor-pointer border-none bg-transparent text-[2.5em] mix-blend-difference lte-800:inline-block ${menuIconColor}`}
+            >
+              <i className="fa fa-bars" aria-hidden="true" />
+            </button>
+          </div>
         </div>
       </div>
     </header>

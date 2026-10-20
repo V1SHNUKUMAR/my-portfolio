@@ -3,7 +3,7 @@ import { ICONS } from './skillIcons'
 export const INTRO =
   'Results-driven Software Developer working in a product-based environment, contributing to core functionalities and end-to-end feature development. Known for delivering reliable solutions, improving user journeys, and enhancing product efficiency.'
 
-export const PROFILE_PHOTO = '/resources/images/me.jpg'
+export const PROFILE_PHOTO = '/resources/images/me.jpeg'
 
 /** `logo: 'supplymint'` renders the inline SVG logo; `tall` is the taller Zysk logo box. */
 export const EXPERIENCE = [

@@ -1,5 +1,6 @@
 import { Fragment } from 'react'
 import Reveal from '../../components/ui/Reveal'
+import ProjectFrame from '../../components/ui/ProjectFrame'
 import ShineButton from '../../components/ui/ShineButton'
 import { FEATURED_PROJECTS } from '../../data/projects'
 
@@ -42,7 +43,7 @@ function ProjectInfo({ project, mirrored }) {
   )
 }
 
-const picsClass = 'flex max-w-[50%] items-center justify-center lte-870:mx-auto lte-870:min-w-[90%]'
+const picsClass = 'flex max-w-[40%] items-center justify-center lte-870:mx-auto lte-870:min-w-[90%]'
 
 export default function FeaturedProjects() {
   const [first, second] = FEATURED_PROJECTS
@@ -55,13 +56,13 @@ export default function FeaturedProjects() {
       <Reveal className="my-[10em] flex w-full flex-wrap-reverse items-center justify-evenly gap-[5rem]">
         <ProjectInfo project={first} />
         <Reveal className={picsClass}>
-          <img src={first.image.src} alt={first.image.alt} className="w-full" />
+          <ProjectFrame src={first.image.src} alt={first.image.alt} url={first.url} />
         </Reveal>
       </Reveal>
 
       <Reveal className="my-[10em] flex w-full flex-wrap items-center justify-evenly gap-[5rem]">
         <div className={picsClass}>
-          <img src={second.image.src} alt={second.image.alt} className="w-full" />
+          <ProjectFrame src={second.image.src} alt={second.image.alt} url={second.url} />
         </div>
         <ProjectInfo project={second} mirrored />
       </Reveal>
