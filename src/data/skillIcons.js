@@ -13,6 +13,7 @@ export const ICONS = {
   nextjs: `${dir}/nextjs.png`,
   nodejs: `${dir}/nodejs.png`,
   express: `${dir}/Expressjs.png`,
+  mysql: `${dir}/mysql.png`,
   mongodb: `${dir}/mongodb.svg`,
   tailwind: `${dir}/tailwind.png`,
   mui: `${dir}/mui.png`,

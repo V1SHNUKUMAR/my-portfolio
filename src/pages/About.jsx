@@ -1,6 +1,6 @@
 import AchievementsSection from '../components/sections/AchievementsSection'
 import DsaSection from '../components/sections/DsaSection'
-import { ABOUT_CERTIFICATES } from '../data/profile'
+import { ALL_CERTIFICATES } from '../data/profile'
 import AboutHero from './about/AboutHero'
 import EducationSection from './about/EducationSection'
 import ExperienceSection from './about/ExperienceSection'
@@ -14,7 +14,7 @@ export default function About() {
       <EducationSection />
       <TechStackSection />
       <ExperienceSection />
-      <AchievementsSection certificates={ABOUT_CERTIFICATES} revealHeadline />
+      <AchievementsSection certificates={ALL_CERTIFICATES} revealHeadline />
       <DsaSection reveal />
       <HobbiesSection />
     </>

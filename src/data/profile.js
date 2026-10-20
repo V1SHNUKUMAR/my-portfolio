@@ -64,6 +64,7 @@ export const TECH_STACK = [
   { name: 'Nextjs', icon: ICONS.nextjs, alt: 'Nextjs' },
   { name: 'Nodejs', icon: ICONS.nodejs, alt: 'Nodejs' },
   { name: 'Express', icon: ICONS.express, alt: 'Express' },
+  { name: 'MySQL', icon: ICONS.mysql, alt: 'MySQL' },
   { name: 'MongoDB', icon: ICONS.mongodb, alt: 'MongoDB' },
   { name: 'Tailwind', icon: ICONS.tailwind, alt: 'Tailwind' },
   { name: 'Material UI', icon: ICONS.mui, alt: 'Material UI' },
@@ -124,7 +125,7 @@ export const CERTIFICATES = {
   java: { src: cert('java-basic certificate-Hackerrank.jpg'), alt: 'Java certificate' },
 }
 
-export const HOME_CERTIFICATES = [
+export const ALL_CERTIFICATES = [
   CERTIFICATES.javascript,
   CERTIFICATES.frontend,
   CERTIFICATES.maxProdWithAI,
@@ -133,11 +134,4 @@ export const HOME_CERTIFICATES = [
   CERTIFICATES.html,
   CERTIFICATES.css,
   CERTIFICATES.java,
-]
-
-export const ABOUT_CERTIFICATES = [
-  CERTIFICATES.javascript,
-  CERTIFICATES.html,
-  CERTIFICATES.frontend,
-  CERTIFICATES.css,
 ]
