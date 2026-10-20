@@ -1,0 +1,156 @@
+/*
+ * Layer order matters:
+ *  - base     : the original global reset (`* { font-size: 10px; ... }`)
+ *  - vendor   : Font Awesome 4 / Swiper. Their class rules must beat the `*` reset
+ *               (as they did originally through specificity) but lose to utilities.
+ *  - components / utilities : our own styles.
+ *
+ * Tailwind's preflight is intentionally NOT imported: the original design relies on
+ * browser defaults (inline images, bold headings, inset <hr>, normal line-height).
+ */
+@layer theme, base, vendor, components, utilities;
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+@import "font-awesome/css/font-awesome.css" layer(vendor);
+@import "swiper/css" layer(vendor);
+@import "swiper/css/navigation" layer(vendor);
+@import "swiper/css/pagination" layer(vendor);
+@import "swiper/css/effect-coverflow" layer(vendor);
+
+@source not "../public";
+
+@theme {
+  --font-sans: "DM Sans", sans-serif;
+  --font-logo: "Ubuntu", sans-serif;
+
+  --color-tomato: tomato;
+  --color-brand: rgb(8, 144, 255);
+  --color-ink: #1c232b;
+  --color-page: rgb(248, 248, 255);
+  --color-text: #000;
+
+  --animate-bounce-up: bounce-up 5s ease-in-out infinite;
+  --animate-bounce-down: bounce-down 5s ease-in-out infinite;
+  --animate-scale-up: scale-up 1s ease-in-out 1;
+  --animate-starter: starter 3s ease-in-out forwards;
+  --animate-open-text: open-text 1s ease-in-out 1s forwards;
+
+  @keyframes bounce-up {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-50px); }
+    100% { transform: translateY(0); }
+  }
+  @keyframes bounce-down {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(50px); }
+    100% { transform: translateY(0); }
+  }
+  @keyframes scale-up {
+    0% { transform: scale(0.3); }
+    100% { transform: scale(1); }
+  }
+  @keyframes starter {
+    0% { transform: translateY(-5vh); }
+    20% { transform: translateY(0); }
+    53% { transform: translateY(0); }
+    80% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100%); letter-spacing: 8px; opacity: 0; }
+  }
+  @keyframes open-text {
+    0% { width: 0; }
+    100% { width: 225px; }
+  }
+}
+
+/* The original site uses desktop-first `max-width` media queries at these exact widths. */
+@custom-variant lte-1260 (@media screen and (max-width: 1260px));
+@custom-variant lte-1209 (@media screen and (max-width: 1209px));
+@custom-variant lte-1100 (@media screen and (max-width: 1100px));
+@custom-variant lte-1005 (@media screen and (max-width: 1005px));
+@custom-variant lte-900 (@media screen and (max-width: 900px));
+@custom-variant lte-870 (@media screen and (max-width: 870px));
+@custom-variant lte-800 (@media screen and (max-width: 800px));
+@custom-variant lte-780 (@media screen and (max-width: 780px));
+@custom-variant lte-720 (@media screen and (max-width: 720px));
+@custom-variant lte-500 (@media screen and (max-width: 500px));
+@custom-variant lte-440 (@media screen and (max-width: 440px));
+@custom-variant lte-350 (@media screen and (max-width: 350px));
+
+/* Dark mode is a `.dark` class on <html>, set before first paint by the script in index.html. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  /* Every element is reset to 10px; all `em`/`rem` sizes in the design build on this. */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    z-index: 0;
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+  }
+
+  .dark {
+    --color-page: #0e1217;
+    --color-text: #e6e8ec;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--color-page);
+    color: var(--color-text);
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background: linear-gradient(to bottom, #fc5c7d, #6a82fb);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #fc5c7cc2, #6a82fbc7);
+  }
+}
+
+@layer components {
+  /* Animate-on-scroll (was `.hidden` / `.show`). Utilities may override transform/transition. */
+  .reveal {
+    opacity: 0;
+    transform: translateY(10%);
+    transition: 1s;
+    transition-delay: 0.3s;
+  }
+  .reveal.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  @media (prefers-reduced-motion) {
+    .reveal {
+      transition: none;
+    }
+  }
+
+  /* Cursor element injected by Typed.js */
+  .typed-cursor {
+    background: none;
+    background-repeat: no-repeat;
+    color: black;
+    background-color: black;
+    border: 1px solid black;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .dark .typed-cursor {
+    color: white;
+    background-color: white;
+    border-color: white;
+  }
+}
