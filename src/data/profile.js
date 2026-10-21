@@ -42,6 +42,7 @@ export const SKILL_CHIPS = [
   'Nextjs',
   'Nodejs',
   'Express',
+  'MySQL',
   'MongoDB',
   'Tailwind',
   'Bootstrap',

@@ -20,7 +20,7 @@ function BasicInfo() {
       <Reveal className="m-[0.5em] text-[1.8em] leading-none text-[color:grey] delay-200">Software Developer</Reveal>
       <Reveal>
         <h5 className="m-[0.5em] text-[1.7em] font-normal">
-          <i className="fa fa-map-marker text-tomato" aria-hidden="true" /> Hathras, U.P.
+          <i className="fa fa-map-marker text-tomato" aria-hidden="true" /> Gurugram, Haryana
         </h5>
       </Reveal>
       <Reveal className="flex w-[90%] flex-wrap items-center justify-center gap-[0.25em] p-[1em]">

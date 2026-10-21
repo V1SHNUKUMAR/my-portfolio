@@ -4,8 +4,9 @@ export const PROJECTS = [
   {
     name: 'Moments',
     techs: [
-      { name: 'Tailwind CSS' },
       { name: 'React.js' },
+      { name: 'Tailwind CSS' },
+      { name: 'Shadcn' },
       { name: 'Node.js' },
       { name: 'Express' },
       { name: 'MySQL' },
@@ -19,8 +20,12 @@ export const PROJECTS = [
   {
     name: 'Chatty',
     techs: [
-      { name: 'Tailwind CSS' },
       { name: 'React.js' },
+      { name: 'Tailwind CSS' },
+      { name: 'Sockets' },
+      { name: 'Node.js' },
+      { name: 'Express' },
+      { name: 'MongoDb' },
     ],
     description:
       'This is a real-time chat application built with precision and attention to detail. It offers seamless messaging powered by sockets for instant communication. The frontend is crafted using React, Tailwind CSS, and DaisyUI to ensure a clean and modern interface, while the backend leverages Node.js, Express, and MongoDB for secure data handling. It supports features like user authentication, message storage, and responsive design for a smooth chatting experience across devices.',
@@ -31,8 +36,8 @@ export const PROJECTS = [
   {
     name: 'Amazon clone',
     techs: [
-      { name: 'Tailwind CSS' },
       { name: 'React.js' },
+      { name: 'Tailwind CSS' },
     ],
     description:
       'This Amazon clone is created using Tailwind CSS and React.js. This is a fully responsive clone for all devices and is able to perform many functionalities. This clone is a pixel perfect clone, meaning attention to detail is kept in mind while building this. This includes image sliders for various sections of the web app. It performs many functionalities such as Add / Remove products in the cart, Filter products by price or categories like mens clothing, mobiles, etc. It shows realtime subtotal calculation in the cart page.',
@@ -42,7 +47,13 @@ export const PROJECTS = [
   },
   {
     name: 'My Notebook',
-    techs: [{ name: 'reactjs' }],
+    techs: [
+      { name: 'React.js' },
+      { name: 'Tailwind CSS' },
+      { name: 'Node.js' },
+      { name: 'Express' },
+      { name: 'MongoDb' },
+    ],
     description:
       "This My Notebook is a web app which enables users to store their notes securely. Here, I've integrated authentication for users meaning users can signin/signup. Here users can also perform CRUD operations meaning user can create note, edit/update note, delete note. Everything happens by an API I created with the help of youtube. Notes are stored securely in the mongodb database.",
     codeUrl: 'https://github.com/V1SHNUKUMAR/my_notebook',
@@ -52,8 +63,8 @@ export const PROJECTS = [
   {
     name: 'Cinemix',
     techs: [
-      { name: 'reactjs' },
-      { name: 'reactjs' },
+      { name: 'React.js' },
+      { name: 'Tailwind CSS' },
     ],
     description:
       'Cinemix is a movies app made using Tailwind and React.js responsive for all devices. It utilizes an API and Axios is used to fetch data from it. It shows movies for different categories. It shows a cool loading animation while it is fetching data. Infinite scrolling is also integrated in the app which gives a seamless user experience.',
@@ -64,8 +75,8 @@ export const PROJECTS = [
   {
     name: 'Draw Magic',
     techs: [
-      { name: 'tailwind' },
-      { name: 'nextjs' },
+      { name: 'Next.js' },
+      { name: 'Tailwind CSS' },
     ],
     description:
       'Draw Magic is an innovative drawing app designed for creativity and ease. With dark and light modes, users can draw in their preferred environment. Built using canvas, it enables freeform drawing with tools like a pen, eraser, and a customizable thickness option. A color picker with a recent colors feature makes selecting shades seamless. Users can capture their creations instantly with the screenshot feature, and a reset button ensures effortless restarts. Draw Magic empowers artists of all levels to bring their imaginations to life.',
@@ -116,8 +127,12 @@ export const FEATURED_PROJECTS = [
     name: 'Fullstack Chat App',
     url: 'https://fullstack-chat-app-n8wp.onrender.com',
     techs: [
-      { name: 'tailwind' },
-      { name: 'reactjs' },
+      { name: 'React.js' },
+      { name: 'Tailwind CSS' },
+      { name: 'Sockets' },
+      { name: 'Node.js' },
+      { name: 'Express' },
+      { name: 'MongoDb' },
     ],
     // label: 'Realtime messaging',
     description: PROJECTS[0].description,
@@ -127,7 +142,7 @@ export const FEATURED_PROJECTS = [
     name: 'Draw Magic',
     url: 'https://draw-magic.vercel.app/',
     techs: [
-      { name: 'Reactjs' },
+      { name: 'Next.js' },
       { name: 'Tailwind CSS' },
     ],
     // label: 'Collaborative canvas',
