@@ -124,7 +124,7 @@ export const PROJECTS = [
 /** The two projects featured on the home page (tech icon order differs from the projects page). */
 export const FEATURED_PROJECTS = [
   {
-    name: 'Fullstack Chat App',
+    name: 'Chatty',
     url: 'https://fullstack-chat-app-n8wp.onrender.com',
     techs: [
       { name: 'React.js' },
