@@ -34,6 +34,19 @@ export const PROJECTS = [
     cover: img('chatApp/chatApp.png'),
   },
   {
+    name: 'Draw Magic',
+    techs: [
+      { name: 'Next.js' },
+      { name: 'Tailwind CSS' },
+    ],
+    description:
+      'Draw Magic is an innovative drawing app designed for creativity and ease. With dark and light modes, users can draw in their preferred environment. Built using canvas, it enables freeform drawing with tools like a pen, eraser, and a customizable thickness option. A color picker with a recent colors feature makes selecting shades seamless. Users can capture their creations instantly with the screenshot feature, and a reset button ensures effortless restarts. Draw Magic empowers artists of all levels to bring their imaginations to life.',
+    liveUrl: 'https://draw-magic.vercel.app/',
+    codeUrl: 'https://github.com/V1SHNUKUMAR/DrawMagic',
+    // the file name really starts with a space
+    cover: img('draw_magic/drawMagicApp.png'),
+  },
+  {
     name: 'Amazon clone',
     techs: [
       { name: 'React.js' },
@@ -71,19 +84,6 @@ export const PROJECTS = [
     liveUrl: 'https://cinemix-movies.netlify.app',
     codeUrl: 'https://github.com/V1SHNUKUMAR/movies-app',
     cover: img('moviesApp/moviesApp.png'),
-  },
-  {
-    name: 'Draw Magic',
-    techs: [
-      { name: 'Next.js' },
-      { name: 'Tailwind CSS' },
-    ],
-    description:
-      'Draw Magic is an innovative drawing app designed for creativity and ease. With dark and light modes, users can draw in their preferred environment. Built using canvas, it enables freeform drawing with tools like a pen, eraser, and a customizable thickness option. A color picker with a recent colors feature makes selecting shades seamless. Users can capture their creations instantly with the screenshot feature, and a reset button ensures effortless restarts. Draw Magic empowers artists of all levels to bring their imaginations to life.',
-    liveUrl: 'https://draw-magic.vercel.app/',
-    codeUrl: 'https://github.com/V1SHNUKUMAR/DrawMagic',
-    // the file name really starts with a space
-    cover: img('draw_magic/drawMagicApp.png'),
   },
   {
     name: 'Group Chat App',
@@ -147,6 +147,6 @@ export const FEATURED_PROJECTS = [
     ],
     // label: 'Collaborative canvas',
     description: PROJECTS[4].description,
-    image: { src: img('draw_magic/ draw-mac-dark.png'), alt: 'Draw Magic' },
+    image: { src: img('draw_magic/drawMagicApp.png'), alt: 'Draw Magic' },
   },
 ]
