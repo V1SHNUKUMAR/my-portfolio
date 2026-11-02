@@ -44,14 +44,14 @@ export default function ProjectCard({ project, position }) {
         className={`relative flex min-h-[90vh] content-center items-center justify-around rounded-[12px] lte-1005:flex-col-reverse lte-1005:justify-center lte-1005:gap-[5rem] ${coverBackground(position)} ${coverBlobs(position)}`}
       >
         <Reveal className="mx-0 mt-[0.5em] mb-[1em] w-[40%] max-w-[60em] p-[1em] lte-1005:mx-auto lte-1005:w-full lte-1005:text-center lte-1005:font-medium">
-          <TechTags techs={project.techs} className="mb-[1.5em] lte-1005:justify-center" />
           <div
             data-cursor-enlarge
-            className="text-[5em] font-extrabold lte-1260:text-[4em] lte-1005:text-[3.5em] lte-500:text-[3em]"
+            className="mb-8 text-[5em] font-extrabold lte-1260:text-[4em] lte-1005:text-[3.5em] lte-500:text-[3em]"
           >
             {project.name}
           </div>
-          <div className="m-[1em] h-[0.3em] w-[10em] rounded-[2px] bg-black lte-1005:mx-auto dark:bg-white" />
+          <TechTags techs={project.techs} className="mb-[1.5em] lte-1005:justify-center" />
+          {/* <div className="m-[1em] h-[0.3em] w-[10em] rounded-[2px] bg-black lte-1005:mx-auto dark:bg-white" /> */}
           <div data-cursor-enlarge className="px-[0.1em] py-[0.5em] text-[1.4em] opacity-80">
             {project.description}
           </div>

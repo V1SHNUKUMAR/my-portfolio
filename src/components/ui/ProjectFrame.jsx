@@ -39,7 +39,7 @@ export default function ProjectFrame({ src, alt, url, label, caption = 'Live pro
 
       {/* Screenshot */}
       <div className="relative">
-        <div className="aspect-[18/10] overflow-hidden">
+        <div className="aspect-[16/10] overflow-hidden">
           <img
             src={src}
             alt={alt}

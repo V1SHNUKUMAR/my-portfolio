@@ -2,6 +2,21 @@ const img = (path) => `/resources/images/projects/${path}`
 
 export const PROJECTS = [
   {
+    name: 'Prep Pilot',
+    techs: [
+      { name: 'React.js' },
+      { name: 'Tailwind CSS' },
+      { name: 'Node.js' },
+      { name: 'Express' },
+      { name: 'MongoDB' },
+    ],
+    description:
+      'An AI-powered interview prep app built with React, Node.js, Express and MongoDB. Upload your resume and a job description, and Google Gemini scores how well you match, flags your skill gaps, predicts technical and behavioral questions with model answers, and builds a day-by-day prep plan. It can also generate an ATS-friendly resume tailored to the role, exported as a PDF.',
+    liveUrl: 'https://app-prep-pilot.vercel.app/',
+    codeUrl: 'https://github.com/V1SHNUKUMAR/genai-jobprep',
+    cover: img('prepPilot/prepPilot.png'),
+  },
+  {
     name: 'Moments',
     techs: [
       { name: 'React.js' },
@@ -121,32 +136,17 @@ export const PROJECTS = [
   },
 ]
 
-/** The two projects featured on the home page (tech icon order differs from the projects page). */
-export const FEATURED_PROJECTS = [
-  {
-    name: 'Chatty',
-    url: 'https://fullstack-chat-app-n8wp.onrender.com',
-    techs: [
-      { name: 'React.js' },
-      { name: 'Tailwind CSS' },
-      { name: 'Sockets' },
-      { name: 'Node.js' },
-      { name: 'Express' },
-      { name: 'MongoDb' },
-    ],
-    // label: 'Realtime messaging',
-    description: PROJECTS[0].description,
-    image: { src: img('chatApp/chatApp.png'), alt: 'chat app' },
-  },
-  {
-    name: 'Draw Magic',
-    url: 'https://draw-magic.vercel.app/',
-    techs: [
-      { name: 'Next.js' },
-      { name: 'Tailwind CSS' },
-    ],
-    // label: 'Collaborative canvas',
-    description: PROJECTS[4].description,
-    image: { src: img('draw_magic/drawMagicApp.png'), alt: 'Draw Magic' },
-  },
-]
+/** Names of the two projects featured on the home page; swap these to change what's shown. */
+const FEATURED_NAMES = ['Prep Pilot', 'Chatty']
+
+export const FEATURED_PROJECTS = FEATURED_NAMES.map((name) => {
+  const project = PROJECTS.find((p) => p.name === name)
+  if (!project) throw new Error(`Featured project "${name}" not found in PROJECTS`)
+  return {
+    name: project.name,
+    url: project.liveUrl ?? project.codeUrl,
+    techs: project.techs,
+    description: project.description,
+    image: { src: project.cover, alt: project.name },
+  }
+})
